@@ -28,14 +28,13 @@ class Ingredients extends React.Component {
                 
                 <Form.Group controlId="exampleForm.ControlSelect1">
                     <Form.Label>Sélectionner des ingrédients :</Form.Label>
-                        <Form.Control as="select">
-                            {this.state.list.map((el) => {
+                        <Form.Control as="select" onChange={this.props.onChange}>
+                            {this.state.list.map((el,key) => {
                                 return (
-                                <option key={el._id}>{el.name}</option>
+                                <option key={key}>{el.name}</option>
                                 );
                             })}
-                        </Form.Control>                         
-                 
+                        </Form.Control>                        
                 </Form.Group>                
                 
                 

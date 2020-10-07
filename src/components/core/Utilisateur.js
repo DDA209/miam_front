@@ -32,7 +32,7 @@ class Utilisateur extends Component {
 
                 <p>Ajouter d'ingrédients :</p>
                 <Button variant="outline-secondary"><a href="/add">Ajouter des ingrédients</a></Button>
-                {/*<UserInfo />*/}             
+                        
 
             </div> 
         );

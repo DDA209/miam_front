@@ -1,0 +1,47 @@
+{
+    "success": true,
+    "data": [
+        {
+            "_id": "5f7d8f73f686bb0cf04daeae",
+            "ingredient": {
+                "_id": "5f7d83861a189f457c4ba0e5",
+                "name": "Lait",
+                "unity": "litre",
+                "created": "2020-10-07T08:59:50.396Z",
+                "__v": 0
+            },
+            "user": "5f7d83861a189f457c4ba0d9",
+            "quantity": 4,
+            "created": "2020-10-07T09:50:44.002Z",
+            "__v": 0
+        },
+        {
+            "_id": "5f7d93b58058a22dd0feea78",
+            "ingredient": {
+                "_id": "5f7d83861a189f457c4ba0e9",
+                "name": "Eau",
+                "unity": "litre",
+                "created": "2020-10-07T08:59:50.397Z",
+                "__v": 0
+            },
+            "user": "5f7d83861a189f457c4ba0d9",
+            "quantity": 1000,
+            "created": "2020-10-07T10:08:53.354Z",
+            "__v": 0
+        },
+        {
+            "_id": "5f7d964d1bdd5c39bc5e13aa",
+            "ingredient": {
+                "_id": "5f7d83861a189f457c4ba0e0",
+                "name": "Gingembre",
+                "unity": "kilo",
+                "created": "2020-10-07T08:59:50.393Z",
+                "__v": 0
+            },
+            "user": "5f7d83861a189f457c4ba0d9",
+            "quantity": 1,
+            "created": "2020-10-07T10:19:57.056Z",
+            "__v": 0
+        }
+    ]
+}

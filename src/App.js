@@ -15,6 +15,7 @@ import Login from './components/Login';
 import UserInfo from './components/core/UserInfo';
 import Utilisateur from './components/core/Utilisateur';
 import Menu1 from './components/menu/Menu1';
+import UserList from './components/core/UserList';
 //import IngredientsCount from './components/core/IngredientsCount';
 // import Ingredients from './components/form/select/Ingredients';
 //import Ingredients from './public/json/ingredients.json'
@@ -46,7 +47,8 @@ class App extends Component {
                     <Route path="/userinfo" component={UserInfo} />
                     <Route path="/add" component={Add}/>
                     {/*<Route path="/userlist" component={UserList} />*/}
-                    <Route path="/utilisateur" component={Utilisateur} />  
+                    <Route path="/utilisateur" component={Utilisateur} /> 
+                    <Route path="/userlisr" component={UserList} /> 
                     <Route  path="/menu1" component={Menu1} />     
               </Switch>              
           </div>        
