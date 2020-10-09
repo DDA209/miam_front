@@ -13,7 +13,7 @@ class Add extends Component {
         this.state = {
             ingredient:'',
             quantity:'',
-            // userId: '5f7f11d422b51e2534008c8d',
+            userId: '5f7f11d422b51e2534008c8d',
             username:'Batman',
             unity:'',
             list: [],  
@@ -24,6 +24,18 @@ class Add extends Component {
         // this.handleSubmit=this.handleSubmit.bind(this);
         this.addListIngredient=this.addListIngredient.bind(this);
         this.handleDelete= this.handleDelete.bind(this);
+    }
+
+    componentDidMount(){
+        fetch('http://localhost:3003/listIngredients/users/5f7f11d422b51e2534008c8d')
+        .then(res => res.json())
+        .then((json) => {
+            console.log("componentDidMount",json);
+            this.setState({
+                list:json.data
+            })
+        });
+        console.log("componentDidMount this.state.list",this.state.list);
     }
     
     handleChangeQuantity(event){
@@ -49,17 +61,16 @@ class Add extends Component {
          })
      }
     addListIngredient(){
-            const { quantity, ingredient,unity, username }=this.state;
+            const { quantity, ingredient,unity, username,userId }=this.state;
             const list = this.state.list;
             const ingredientFetch={
                 quantity,
                 ingredient: ingredient.name,
                 username
-
             }
             const ingredientObject = {
                 quantity,
-                ingredient
+                ingredient,
             };
 
             list.push(ingredientObject);
@@ -80,9 +91,7 @@ class Add extends Component {
             .then(res => res.json())
             .then((json) => {
                 console.log(json.success);
-                // if (err) {
-                // console.log('err', err);
-                // return;
+            
             });
     }
     handleDelete=(item)=>{
@@ -116,6 +125,10 @@ class Add extends Component {
                                         <Button  className="buttontext" className="bg-success text-dark b-3 m-5 font-weight-bolder ml-3 " onClick={this.addListIngredient}>Ajouter</Button>
                                     {/* <Button variant="primary" onSubmit={this.handleSubmit}>Envoyer</Button> */}
                             </Form>
+                            <Button  className="buttontext" className="bg-success text-dark b-3 m-5 font-weight-bolder ml-3 ">
+                                <a href="/menu1">Suivant</a>
+                            </Button>
+                    
                         </Col>
                         <Col>
                             <ul className="list-group mb-4 mt-4" >
