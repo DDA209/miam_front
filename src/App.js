@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 // import { Card, Button, Form, ListGroup, Modal, Navbar, Nav } from 'react-bootstrap';
 import {
   BrowserRouter as Router,
@@ -14,7 +16,7 @@ import Welcome from './components/Welcome';
 import Login from './components/Login';
 import UserInfo from './components/core/UserInfo';
 import Utilisateur from './components/core/Utilisateur';
-import Menu1 from './components/menu/Menu1';
+// import Menu1 from './components/menu/Menu1'; // commented because of an error @Emad 09/10
 import UserList from './components/core/UserList';
 //import IngredientsCount from './components/core/IngredientsCount';
 // import Ingredients from './components/form/select/Ingredients';
@@ -35,9 +37,10 @@ class App extends Component {
 
   render (){   
     return(
-      <Router>                 
+      <Router>
+        <Navigation />               
           <div className="container-fluid" >
-            <Navigation />
+            
               <Switch>
                     <Route exact path="/" component={Home} />
                     <Route  path="/login" component={Login} />
@@ -49,7 +52,7 @@ class App extends Component {
                     {/*<Route path="/userlist" component={UserList} />*/}
                     <Route path="/utilisateur" component={Utilisateur} /> 
                     <Route path="/userlisr" component={UserList} /> 
-                    <Route  path="/menu1" component={Menu1} />     
+                    {/* <Route  path="/menu1" component={Menu1} />   ask Emad  */}
               </Switch>              
           </div>        
       </Router>

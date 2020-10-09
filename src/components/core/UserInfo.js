@@ -31,28 +31,10 @@ class Userinfo extends Component {
         this.props.history.push('/add');
     }
     render(){ 
-        {/*const {
-            list
-        } = this.state;
-        console.log('this.state.list', this.state.list);
-    console.log('list[0]', list[0]);*/}
+        {}
         return(
             <div className="container-fluid">
-                {/*<Card style={{ width: '18rem' }}>
-                <Card.Header>Liste des ingrédients :</Card.Header>
-                    <ListGroup variant="flush">
-                    <ul>
-                        {list.map((list, id) => {
-                            return (
-                                <li key = {list.id}>
-                                {list.ingredientName} : {list.quantity}  {list.unity} 
-                                </li>
-                            );
-                        })}
-                    </ul>
-                    </ListGroup>
-                    </Card>*/}
-                {/*<Ingredients />*/}
+                
                 <p>Ajouter d'ingrédients :</p>
                 <Button variant="outline-secondary" onClick={this.logout.bind(this)}>Ajouter des ingrédients</Button>
             </div>

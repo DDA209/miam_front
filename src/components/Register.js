@@ -1,4 +1,6 @@
 import React from 'react';
+// import './Register.css'; all css been removed to index.css @mad
+import 'bootstrap/dist/css/bootstrap.min.css';
 // // import axios from 'axios';
 // import Welcome from './Welcome';
 // import { Redirect } from "react-router-dom";
@@ -51,38 +53,38 @@ class Register extends React.Component{
   
   render(){
           return(
-                <div> 
+                <div className="form-register"> 
                   {this.state.err !=='' ? this.state.err:''}       
-                  <Form onSubmit={this.handleSubmit}>
+                  <Form onSubmit={this.handleSubmit} >
                      <h1>Inscription </h1>
                       <Form.Group controlId="formGroupEmail" >
-                          <Form.Label>Email</Form.Label>
+                          <Form.Label className="label">Email</Form.Label>
                           <Form.Control type="email" name='email' placeholder="Votre email" value={this.state.email} onChange={this.handleChange} required />
                       </Form.Group>
-                      <Form.Group controlId="formGroupPassword">
-                          <Form.Label >Prenom</Form.Label>
+                      <Form.Group controlId="formGroupPassword" >
+                          <Form.Label className="label" >Prenom</Form.Label>
                           <Form.Control type="text" name='firstName' placeholder="Votre prénom"value={this.state.firstName} onChange={this.handleChange} required  />
                       </Form.Group>
                       <Form.Group controlId="formGroupEmail">
-                          <Form.Label>Nom</Form.Label>
+                          <Form.Label className="label">Nom</Form.Label>
                           <Form.Control type="text" name='lastName' placeholder="Votre nom" value={this.state.lastName} onChange={this.handleChange} required/>
                       </Form.Group>
                       <Form.Group controlId="formGroupPassword">
-                          <Form.Label >Mot de pass</Form.Label>
+                          <Form.Label className="label" >Mot de pass</Form.Label>
                           <Form.Control type="password" name='password' placeholder="Votre mot de pass" value={this.state.password} onChange={this.handleChange} required />
                       </Form.Group>
                       <Form.Group controlId="formGroupPassword">
-                          <Form.Label>Confirmation</Form.Label>
+                          <Form.Label className="label">Confirmation</Form.Label>
                           <Form.Control type="password" name='confirmation' placeholder="Confirmer votre mot de passe" value={this.state.confirmation} onChange={this.handleChange} required/>
                       </Form.Group>
                       <Form.Group controlId="formGroupPassword">
-                          <Form.Label >Date de naissance</Form.Label>
+                          <Form.Label className="label" >Date de naissance</Form.Label>
                           <Form.Control type="Date" name='dateOfBirth' placeholder="DateOfBirth" value={this.state.dateOfBirth} onChange={this.handleChange} required />
                       </Form.Group>
                       <Form.Group>
                           <Form.File id="exampleFormControlFile1" label="Photos" />
                         </Form.Group>
-                      <Button variant="primary" type="submit" onSubmit={this.handleSubmit} >S'inscrire</Button>
+                      <Button variant="primary" type="submit" onSubmit={this.handleSubmit} className=" w-25 ">S'inscrire</Button>
                   </Form>
                 </div>
               );
