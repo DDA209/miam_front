@@ -2,6 +2,8 @@ import React from 'react';
 // import {Link} from 'react-router-dom';
 // import Welcome from './Welcome';
 import {Form, Button} from 'react-bootstrap';
+import '../../src/components/menu/menu_style/menu.css'; 
+
 class Login extends React.Component {
   constructor(props) {
     super(props);
@@ -43,9 +45,9 @@ class Login extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="login">
         {this.state.err !=='' ? this.state.err:''}
-        <Form method="post" onSubmit={this.handleSubmit} >
+        <Form className="login_form" method="post" onSubmit={this.handleSubmit} >
           <Form.Group controlId="formHorizontalEmail">
             <Form.Label>Username</Form.Label>
             <Form.Control type="text" name="username" placeholder="Enter sername" 
@@ -56,7 +58,7 @@ class Login extends React.Component {
             <Form.Control type="password" name='password' placeholder="Password"
               value={this.state.password} onChange={this.handleChange} required/>
           </Form.Group>
-          <Button variant="primary" type="submit" onSubmit={this.handleSubmit}> Se connecter </Button>
+          <Button variant="outline-primary" type="submit" onSubmit={this.handleSubmit}> Se connecter </Button>
         </Form>
       </div>
     );

@@ -1,12 +1,13 @@
 import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './menu_style/menu.css'; 
 
 class Menu1 extends React.Component{
     render(){
         return (
         
-            <div>
+            <div className="button">
                 <div>
                 <button type="button" class="btn btn-primary btn-lg" >Primary</button>
                 <button type="button" class="btn btn-primary btn-lg">Secondary</button>
