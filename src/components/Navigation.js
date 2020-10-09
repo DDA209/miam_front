@@ -21,18 +21,12 @@ class Navigation extends React.Component{
                   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                   <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">
-                      <Nav.Link><Link to="/login"> Se connecter</Link></Nav.Link>
-                      <Nav.Link><Link to="/register">s'inscrire </Link></Nav.Link>
+                      <Nav.Link><Link to="/login" className="font-weight-bolder text-white"> Se connecter</Link></Nav.Link>
+                      <Nav.Link><Link to="/register" className="font-weight-bolder text-white">s'inscrire </Link></Nav.Link>
                     </Nav>
                   </Navbar.Collapse>
                 </Navbar>
             </div>
-              <Switch>
-                <Route path="/login" component={Login} />
-                <Route path="/register" component={Register} />
-                <Route path="/userinfo" component={UserInfo} />
-
-              </Switch>
         </div>
       </Router>
     );

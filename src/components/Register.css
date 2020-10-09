@@ -1,0 +1,15 @@
+.form-register{
+    width:50%;
+    margin:10px auto;
+    font-size: large;
+    font-weight: Bold;
+
+}
+h1{
+    text-align:center;
+    font-style: italic;
+}
+.label{
+    font-style: italic;
+    font-size: large;
+}

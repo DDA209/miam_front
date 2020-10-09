@@ -3,7 +3,7 @@ import React from 'react';
 
 class Welcome extends React.Component{
     logout(){
-        this.props.history.push('/login');
+        this.props.history.push('/add');
     }
     render(){
         // const {email}=this.props.match.params;

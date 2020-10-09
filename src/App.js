@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import { Card, Button, Form, ListGroup, Modal, Navbar, Nav } from 'react-bootstrap';
 import {
   BrowserRouter as Router,

@@ -1,0 +1,15 @@
+.form-ingredients{
+    width:50%;
+    margin:50px auto;
+    background-color: blue;
+
+}
+.lable{
+    font-weight: bold;
+    font-size: large;
+    color: black;
+}
+.buttontext{
+    margin-left:70px;
+    background-color: brown;
+}

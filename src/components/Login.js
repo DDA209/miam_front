@@ -1,4 +1,6 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Login.css';
 // import {Link} from 'react-router-dom';
 // import Welcome from './Welcome';
 import {Form, Button} from 'react-bootstrap';
@@ -43,17 +45,17 @@ class Login extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="form-login">
         {this.state.err !=='' ? this.state.err:''}
         <Form method="post" onSubmit={this.handleSubmit} >
-          <Form.Group controlId="formHorizontalEmail">
+          <Form.Group controlId="formHorizontalEmail" className="mb-5" >
             <Form.Label>Username</Form.Label>
-            <Form.Control type="text" name="username" placeholder="Enter sername" 
+            <Form.Control type="text" name="username" placeholder="Enter username" 
               value={this.state.username} onChange={(event) => this.handleChange(event)} required />
           </Form.Group>
-        <Form.Group controlId="formHorizontalPassword">
+        <Form.Group controlId="formHorizontalPassword"className="mb-5" >
             <Form.Label >Password</Form.Label>
-            <Form.Control type="password" name='password' placeholder="Password"
+            <Form.Control type="password" name='password' placeholder=" Enter Password"
               value={this.state.password} onChange={this.handleChange} required/>
           </Form.Group>
           <Button variant="primary" type="submit" onSubmit={this.handleSubmit}> Se connecter </Button>
