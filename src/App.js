@@ -22,7 +22,7 @@ import UserList from './components/core/UserList';
 // import Ingredients from './components/form/select/Ingredients';
 //import Ingredients from './public/json/ingredients.json'
 import Add from './components/ingredients/Add';
-//import UserList from './components/core/UserList';
+import Menu from './components/core/Menu';
 
 
 class App extends Component {
@@ -52,6 +52,7 @@ class App extends Component {
                     {/*<Route path="/userlist" component={UserList} />*/}
                     <Route path="/utilisateur" component={Utilisateur} /> 
                     <Route path="/userlisr" component={UserList} /> 
+                    <Route path="/menu" component={Menu} /> 
                     {/* <Route  path="/menu1" component={Menu1} />   ask Emad  */}
               </Switch>              
           </div>        
