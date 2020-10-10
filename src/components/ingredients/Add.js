@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import IngredientsCount from '../core/IngredientsCount';
 import Ingredients from '../form/select/Ingredients'; 
 import Message from '../core/Message';
+import './Add.css'
 
 class Add extends Component {
     constructor(props){
@@ -123,7 +124,7 @@ class Add extends Component {
                                             aria-describedby="basic-addon2"
                                             value={this.state.quantity} onChange={this.handleChangeQuantity} />
                                     </Form.Group>
-                                        <Button  className="buttontext" className="bg-success text-dark b-3 m-5 font-weight-bolder ml-3 " onClick={this.addListIngredient}>Ajouter</Button>
+                                        <Button  className="buttontext" onClick={this.addListIngredient}>Ajouter</Button>
                                     {/* <Button variant="primary" onSubmit={this.handleSubmit}>Envoyer</Button> */}
                             </Form>
                             <Button  className="buttontext" className="bg-success text-dark b-3 m-5 font-weight-bolder ml-3 ">
