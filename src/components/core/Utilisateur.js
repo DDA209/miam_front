@@ -53,7 +53,7 @@ class Utilisateur extends Component {
                         <Col>
                                 <Button className="button" href="/menu">Calculer le menu</Button>
 
-                                <Button className="button" href="/add">Ma liste d'ingrédients</Button>
+                                <Button className="button b-3 m-5 ml-3" href="/add">Ma liste d'ingrédients</Button>
                         </Col>                        
              
                     </Row>

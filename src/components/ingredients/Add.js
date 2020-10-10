@@ -14,7 +14,7 @@ class Add extends Component {
         this.state = {
             ingredient:'',
             quantity:'',
-            userId: '5f806f7794e31a0b0045f236',
+            userId: '5f81f42dfd88ec214ce90147',
             username:'Batman',
             unity:'',
             list: [],  
@@ -133,7 +133,7 @@ class Add extends Component {
         return(
             <div className="container-fluid  text-white  form-ingredients">
                 <Container >
-                    <Row xs={1} md={2}>
+                    <Row xs={1} lg={2}>
                         <Col>
                            <Form method="post" onSubmit={this.handleSubmit} >
                                     <Ingredients onChange={this.handleChangeIngredient}/>
@@ -149,7 +149,8 @@ class Add extends Component {
                                         <Button  className="buttontext" onClick={this.addListIngredient}>Ajouter</Button>
                                     {/* <Button variant="primary" onSubmit={this.handleSubmit}>Envoyer</Button> */}
                             </Form>
-                            <Button  className="buttontext bg-success text-dark b-3 m-5 font-weight-bolder ml-3" href="/utilisateur">Suivant
+                            <Button  className="buttontext bg-success text-dark b-3 m-5 font-weight-bolder ml-3" href="/utilisateur">
+                                Retour à la page principale
                             </Button>
                     
                         </Col>

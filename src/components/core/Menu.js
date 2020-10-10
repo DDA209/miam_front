@@ -1,6 +1,15 @@
 import React, {Component} from 'react';
-import  {Button, Row, Col, Card} from 'react-bootstrap';
+import  {
+    Button, 
+    Row, 
+    Col, 
+    Card, 
+    ListGroupItem,
+    ListGroup
+} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './menu.css';
+
 // import UserInfo from './UserInfo';
 // import Quantities from './Quantities';
 
@@ -11,7 +20,7 @@ class Utilisateur extends Component {
         super(props);
         
         this.state = {
-            userId: '5f806f7794e31a0b0045f236',
+            userId: '5f81f42dfd88ec214ce90147',
             username: 'Batman',
             recipes: []
         };
@@ -37,49 +46,43 @@ class Utilisateur extends Component {
 
     render (){
         return(
+            <div className="justify-md-center form-menu">
+                <div>
+                    <Col md={{ span: 4, offset: 4 }}>
+                    <Card className="text-center" style={{ width: '18rem' }}>
+                    <ListGroup className="list-group-flush">
 
-            <Row className="menu"> 
-                <Col
-                    xs={{ span: 12, order: "first"}}
-                    className="mb-3"
-                >
-                </Col>         
-                <h1>Recettes avec vos ingrédients :</h1>
-                <Col>
-                    <Row>
-                    {this.state.recipes.map( (recipe) => {
+                        {this.state.recipes.map( (recipe) => {
                             return(
-                            
-                        
-                            <Col xs="4">
-                                <Card>
-                                    <Row>
-                                        <Col xs="12">
-                                            <h3>{`${recipe.title} (${recipe.dishType})`}</h3>
-                                        </Col>                                           
-                                        <Col xs="3"></Col>
-                                        <Col xs="6">
-                                            <img src={recipe.photos[0]} alt={`Photo de ${recipe.titlee}`} />
-                                        </Col>
-                                        <Col xs="3"></Col>
-                                        <Col xs="7">
-                                            <span>{`Temps de préparation : ${recipe.preparationTime}`}</span>
-                                        </Col>
-                                        <Col xs="5">
-                                            <span>{`Difficulté : ${recipe.difficultyLevel}/3`}</span>
-                                        </Col>
-                                    </Row>
-                                </Card>
-                            </Col>
-                        )
-                    })}
-                    </Row>
 
-                    <p>Page principale</p>
-                    <Button variant="secondary" href="/utilisateur">Page principale</Button>
+                                <Card.Body>
+                                    <Card.Title>{recipe.title}</Card.Title>                        
+                                    <ListGroupItem>                        
+                                        <Card.Img variant="top" img src={recipe.photos[0]} />
+                                        {/* <Card.Link href="/recette1">Recette</Card.Link> */}
+                                        <Card.Text>
+                                        {`Temps de préparation : ${recipe.preparationTime} minutes`}
+                                        {`Difficulté :  ${recipe.difficultyLevel}/3`}
+                                        </Card.Text>                     
+                                    </ListGroupItem>  
+                                </Card.Body>
+                            )
+                        })}
+                        
+                    </ListGroup>
+                    </Card>
                     
-                </Col>
-            </Row> 
+                    <div className="justify-md-center">
+                        <Button className="buttontext bg-success text-dark font-weight-bolder" href="/utilisateur">
+                            Retour à la page principale
+                        </Button>
+                    </div>
+                    </Col>
+                </div>
+
+
+
+            </div>
 
         );
     }
