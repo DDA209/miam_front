@@ -27,7 +27,8 @@ class Add extends Component {
     }
 
     componentDidMount(){
-        fetch('http://localhost:3003/listIngredients/users/5f7f11d422b51e2534008c8d')
+        fetch('http://localhost:3003/listIngredients/users/5f806f7794e31a0b0045f236')
+        // fetch('http://localhost:3003/listIngredients/users/5f7f11d422b51e2534008c8d')
         .then(res => res.json())
         .then((json) => {
             console.log("componentDidMount",json);

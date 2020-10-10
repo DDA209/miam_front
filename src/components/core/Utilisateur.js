@@ -6,17 +6,17 @@ import  {Button, Row, Col} from 'react-bootstrap';
 
 class Utilisateur extends Component {
     
-    constructor(props){
-        super(props);
+    // constructor(props){
+    //     super(props);
         
-        this.state = {
-            userId: '5f806f7794e31a0b0045f236',
-            username: 'Batman',
-            recipes: []
-        };
+    //     this.state = {
+    //         userId: '5f806f7794e31a0b0045f236',
+    //         username: 'Batman',
+    //         recipes: []
+    //     };
 
-        this.processRecipe = this.processRecipe.bind(this);
-    }
+    //     this.processRecipe = this.processRecipe.bind(this);
+    // }
     // constructor(props){
     //     super(props);
     //     this.state = {
@@ -27,27 +27,28 @@ class Utilisateur extends Component {
     //     };
     // }
 
-    processRecipe (){
+    // processRecipe (){
 
-        console.log('components/core/Utilisateur #processRecipe');
-        console.log('components/core/Utilisateur #processRecipe', this.state.userId);
+    //     console.log('components/core/Utilisateur #processRecipe');
+    //     console.log('components/core/Utilisateur #processRecipe', this.state.userId);
 
-        const url = 'http://localhost:3003/recipes/users/' + this.state.userId;
-        // const url = 'http://localhost:3003/recipes/users/5f806f7794e31a0b0045f236';
-        fetch(url)
-        .then(res => res.json())
-        .then((json) => {
-            console.log(json.data);
-            this.setState({
-                recipes: json.data
-            })
-        })
-    }
+    //     const url = 'http://localhost:3003/recipes/users/' + this.state.userId;
+    //     // const url = 'http://localhost:3003/recipes/users/5f806f7794e31a0b0045f236';
+    //     fetch(url)
+    //     .then(res => res.json())
+    //     .then((json) => {
+    //         console.log(json.data);
+    //         this.setState({
+    //             recipes: json.data
+    //         })
+    //     })
+    // }
 
     render (){
         return(
 
-            <Row> 
+            <Row
+                className="user"> 
                 <Col
                     xs={{ span: 12, order: "first"}}
                     className="mb-3"
@@ -55,12 +56,13 @@ class Utilisateur extends Component {
                 </Col>         
                 <Col>
                     
-                    <Button variant="outline-secondary" type="submit" onClick={this.processRecipe}>Calculer le menu</Button>
+                    {/* <Button variant="outline-secondary" type="submit" onClick={this.processRecipe}>Calculer le menu</Button> */}
+                    <Button variant="secondary" href="/menu">Calculer le menu</Button>
 
                     <hr /> 
 
                     <p>Ajouter d'ingrédients :</p>
-                    <Button variant="outline-secondary"><a href="/add">Ajouter des ingrédients</a></Button>
+                    <Button variant="secondary"><a href="/add">Ajouter des ingrédients</a></Button>
                     
                 </Col>
             </Row> 
