@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import  {Button, Row, Col} from 'react-bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 // import UserInfo from './UserInfo';
 // import Quantities from './Quantities';
-import './user.css';
+import './utilisateur.css';
 
 class Utilisateur extends Component {
     
@@ -46,26 +48,32 @@ class Utilisateur extends Component {
 
     render (){
         return(
-
-            <Row
+            <div className="button-calcul">
+                  <Row
                 className="user"> 
-                <Col
+                {/* <Col
                     xs={{ span: 12, order: "first"}}
                     className="mb-3"
                 >
-                </Col>         
+                </Col>       */}
+             
                 
                     
                     {/* <Button variant="outline-secondary" type="submit" onClick={this.processRecipe}>Calculer le menu</Button> */}
                     <Button className="button" href="/menu">Calculer le menu</Button>
 
                     <hr /> 
-
-                    <p>Ajouter d'ingrédients :</p>
+                      
+            </Row> 
+            <Row  className="user">
+                     {/* <p>Ajouter d'ingrédients :</p> */}
                     <Button className="button" href="/add">Ma liste d'ingrédients</Button>
                     
-             
-            </Row> 
+            </Row>
+
+                 
+           
+            </div>
 
         );
     }

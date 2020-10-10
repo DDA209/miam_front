@@ -10,8 +10,11 @@ class Home extends React.Component{
       
         <div className="sign">
           <a href="/utilisateur">
-          <span class="fast-flicker">M</span><span className="flicker">i</span>am
+          <span className="fast-flicker">M</span>
+          <span className="flicker">i</span>
           </a>
+          am
+         
         </div>
             // <div className="home">
             //   {/* <Navigation /> */}
