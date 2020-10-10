@@ -38,9 +38,9 @@ class App extends Component {
   render (){   
     return(
       <Router>
-        <Navigation />               
+        {/* <Navigation />                */}
           <div className="container-fluid" >
-            
+          <Navigation />   
               <Switch>
                     <Route exact path="/" component={Home} />
                     <Route  path="/login" component={Login} />
@@ -51,7 +51,7 @@ class App extends Component {
                     <Route path="/add" component={Add}/>
                     {/*<Route path="/userlist" component={UserList} />*/}
                     <Route path="/utilisateur" component={Utilisateur} /> 
-                    <Route path="/userlisr" component={UserList} /> 
+                    <Route path="/userlist" component={UserList} /> 
                     <Route path="/menu" component={Menu} /> 
                     {/* <Route  path="/menu1" component={Menu1} />   ask Emad  */}
               </Switch>              

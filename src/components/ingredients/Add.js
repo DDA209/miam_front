@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import './Add.css'; all css has been removed to index.css
+// import './Add.css';
 import { Card, Button, Form, ListGroup, Modal,Container,Col,Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import IngredientsCount from '../core/IngredientsCount';
@@ -24,11 +24,11 @@ class Add extends Component {
         // this.handleSubmit=this.handleSubmit.bind(this);
         this.addListIngredient=this.addListIngredient.bind(this);
         this.handleDelete= this.handleDelete.bind(this);
+        // this.deleteId=this.deleteId.bind(this);
     }
 
     componentDidMount(){
-        fetch('http://localhost:3003/listIngredients/users/5f806f7794e31a0b0045f236')
-        // fetch('http://localhost:3003/listIngredients/users/5f7f11d422b51e2534008c8d')
+        fetch('http://localhost:3003/listIngredients/users/5f7f11d422b51e2534008c8d')
         .then(res => res.json())
         .then((json) => {
             console.log("componentDidMount",json);
@@ -38,6 +38,7 @@ class Add extends Component {
         });
         console.log("componentDidMount this.state.list",this.state.list);
     }
+    
     
     handleChangeQuantity(event){
         // event.preventDefault();
@@ -62,7 +63,7 @@ class Add extends Component {
          })
      }
     addListIngredient(){
-            const { quantity, ingredient,unity, username,userId }=this.state;
+            const { quantity, ingredient,unity, username,userId}=this.state;
             const list = this.state.list;
             const ingredientFetch={
                 quantity,
@@ -96,11 +97,32 @@ class Add extends Component {
             });
     }
     handleDelete=(item)=>{
-        console.log(item)
+        console.log('handleDelete item',item)
         const list=Object.assign([],this.state.list);
         list.splice(item,1);
-            this.setState({list:list});
-        }
+        this.setState({list:list});
+        
+    }
+        
+// //  deleteId() {
+//     console.log('this.state.userId',this.state.userId)
+//     console.log('deletIdingredient',this.state.ingredient.ingredient._id)
+//         //  console.log('this.state.ingredient.ingredient._id',this.state.userId,this.state.ingredient.ingredient._id)
+//              fetch('http://localhost:3003/user/'+this.state.userId +'/ingredient/'+list.ingredient._id,{
+//              method:'DELETE',
+             
+//                 headers: {
+//                   'Accept': 'application/json',
+//                   'Content-Type': 'application/json'
+//              },    
+//                 // body: JSON.stringify(ingredientId)    
+//         })
+//         .then(res => res.json())
+//             .then((json) => {
+//                 console.log(json.success);
+            
+//             });
+// }  
            
     render() {
         // console.log("this.state.list#",this.state.list);
@@ -126,8 +148,7 @@ class Add extends Component {
                                         <Button  className="buttontext" className="bg-success text-dark b-3 m-5 font-weight-bolder ml-3 " onClick={this.addListIngredient}>Ajouter</Button>
                                     {/* <Button variant="primary" onSubmit={this.handleSubmit}>Envoyer</Button> */}
                             </Form>
-                            <Button  className="buttontext" className="bg-success text-dark b-3 m-5 font-weight-bolder ml-3 ">
-                                <a href="/menu1">Suivant</a>
+                            <Button  className="buttontext" className="bg-success text-dark b-3 m-5 font-weight-bolder ml-3" href="/utilisateur">Suivant
                             </Button>
                     
                         </Col>
