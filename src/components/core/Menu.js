@@ -44,9 +44,36 @@ class Utilisateur extends Component {
                 >
                 </Col>         
                 <Col>
-                    
-                    
-                    <Card>Menus....</Card>
+                    <Row>
+                    {this.state.recipes.map( (recipe) => {
+                            return(
+                            
+                        
+                            <Col xs="4">
+                                <Card>
+                                    <Row>
+                                        <Col xs="12">
+                                            <h3>{`${recipe.title} (${recipe.dishType})`}</h3>
+                                        </Col>                                           
+                                        <Col xs="3"></Col>
+                                        <Col xs="6">
+                                            <img src={recipe.photos[0]} alt={`Photo de ${recipe.dishType}`} />
+                                        </Col>
+                                        <Col xs="3"></Col>
+                                        <Col xs="4">
+                                            <span>{`Temps de préparation : ${recipe.preparationTime}`}</span>
+                                        </Col>
+                                        <Col xs="4">
+                                        </Col>
+                                        <Col xs="4">
+                                            <span>{`Difficulté : ${recipe.difficultyLevel}`}</span>
+                                        </Col>
+                                    </Row>
+                                </Card>
+                            </Col>
+                        )
+                    })}
+                    </Row>
 
                     <p>Page principale</p>
                     <Button variant="secondary" href="/utilisateur">Page principale</Button>
