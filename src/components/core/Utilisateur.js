@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import  {Button, Row, Col, Container} from 'react-bootstrap';
 // import UserInfo from './UserInfo';
 // import Quantities from './Quantities';
-import './user.css';
+import './utilisateur.css';
 
 class Utilisateur extends Component {
     

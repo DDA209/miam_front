@@ -134,7 +134,6 @@ class Add extends Component {
             <div className="container-fluid  text-white  form-ingredients">
                 <Container >
                     <Row xs={1} md={2}>
-                        {/* <Col xs="12" className="mb-3"></Col> */}
                         <Col>
                            <Form method="post" onSubmit={this.handleSubmit} >
                                     <Ingredients onChange={this.handleChangeIngredient}/>
