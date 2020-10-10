@@ -14,7 +14,7 @@ class Add extends Component {
         this.state = {
             ingredient:'',
             quantity:'',
-            userId: '5f7f11d422b51e2534008c8d',
+            userId: '5f806f7794e31a0b0045f236',
             username:'Batman',
             unity:'',
             list: [],  
@@ -29,7 +29,7 @@ class Add extends Component {
     }
 
     componentDidMount(){
-        fetch('http://localhost:3003/listIngredients/users/5f7f11d422b51e2534008c8d')
+        fetch('http://localhost:3003/listIngredients/users/'+this.state.userId)
         .then(res => res.json())
         .then((json) => {
             console.log("componentDidMount",json);
@@ -131,14 +131,15 @@ class Add extends Component {
             list
         } = this.state;
         return(
-            <div className="container-fluid"className= "bg-primary text-white m-5" className="form-ingredients">
+            <div className="container-fluid  text-white  form-ingredients">
                 <Container >
                     <Row xs={1} md={2}>
+                        {/* <Col xs="12" className="mb-3"></Col> */}
                         <Col>
                            <Form method="post" onSubmit={this.handleSubmit} >
                                     <Ingredients onChange={this.handleChangeIngredient}/>
                                     <Form.Group className="mb-4 mt-4">
-                                        <Form.Label className="font-weight-bolder text-dark"  className="lable">Quantités :</Form.Label>
+                                        <Form.Label className="font-weight-bolder text-dark label">Quantités :</Form.Label>
                                         <Form.Control className="font-weight-bolder text-dark"
                                             placeholder="Quantities en chiffres"
                                             aria-label="Quantities en chiffres"
@@ -149,7 +150,7 @@ class Add extends Component {
                                         <Button  className="buttontext" onClick={this.addListIngredient}>Ajouter</Button>
                                     {/* <Button variant="primary" onSubmit={this.handleSubmit}>Envoyer</Button> */}
                             </Form>
-                            <Button  className="buttontext" className="bg-success text-dark b-3 m-5 font-weight-bolder ml-3" href="/utilisateur">Suivant
+                            <Button  className="buttontext bg-success text-dark b-3 m-5 font-weight-bolder ml-3" href="/utilisateur">Suivant
                             </Button>
                     
                         </Col>

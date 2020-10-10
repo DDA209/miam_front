@@ -19,14 +19,19 @@ padding: 100%;
 }
 
 body {
-    background-color: #141114;
     background-image: url('../image/background.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 150%;
     width: 100%;
     background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+
 }
 
+.background{
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff8a;
+}
 .sign {
     position: absolute;
     display: flex;
@@ -238,7 +243,7 @@ to {
     font-family: Clip;
     src: url("https://acupoftee.github.io/fonts/Clip.ttf");
 }
-
+/* 
 body {
     background-color: #141114;
     background-image: url('../image/background.jpg');
@@ -246,4 +251,4 @@ body {
     background-size: 100%;
     width: 100%;
     background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
-}
+} */

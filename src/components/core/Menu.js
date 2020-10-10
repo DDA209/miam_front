@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import  {Button, Row, Col, Card} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import UserInfo from './UserInfo';
 // import Quantities from './Quantities';
 
@@ -43,6 +44,7 @@ class Utilisateur extends Component {
                     className="mb-3"
                 >
                 </Col>         
+                <h1>Recettes avec vos ingrédients :</h1>
                 <Col>
                     <Row>
                     {this.state.recipes.map( (recipe) => {
@@ -57,16 +59,14 @@ class Utilisateur extends Component {
                                         </Col>                                           
                                         <Col xs="3"></Col>
                                         <Col xs="6">
-                                            <img src={recipe.photos[0]} alt={`Photo de ${recipe.dishType}`} />
+                                            <img src={recipe.photos[0]} alt={`Photo de ${recipe.titlee}`} />
                                         </Col>
                                         <Col xs="3"></Col>
-                                        <Col xs="4">
+                                        <Col xs="7">
                                             <span>{`Temps de préparation : ${recipe.preparationTime}`}</span>
                                         </Col>
-                                        <Col xs="4">
-                                        </Col>
-                                        <Col xs="4">
-                                            <span>{`Difficulté : ${recipe.difficultyLevel}`}</span>
+                                        <Col xs="5">
+                                            <span>{`Difficulté : ${recipe.difficultyLevel}/3`}</span>
                                         </Col>
                                     </Row>
                                 </Card>

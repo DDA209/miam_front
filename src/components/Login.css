@@ -11,7 +11,7 @@
 }
 
 /* ~~~~~~~ INIT. BTN ~~~~~~~ */
-
+/* 
 .btn {		
 	position: relative;	
 	padding: 1.4rem 4.2rem;
@@ -44,6 +44,6 @@
 .btn:hover:after {
 	background: var(--inv);
 	transition-delay: .35s;
-}
+} */
 
 /* From Top */

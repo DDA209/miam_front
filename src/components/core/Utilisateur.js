@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import  {Button, Row, Col} from 'react-bootstrap';
+import  {Button, Row, Col, Container} from 'react-bootstrap';
 // import UserInfo from './UserInfo';
 // import Quantities from './Quantities';
 import './user.css';
@@ -47,25 +47,18 @@ class Utilisateur extends Component {
     render (){
         return(
 
-            <Row
-                className="user"> 
-                <Col
-                    xs={{ span: 12, order: "first"}}
-                    className="mb-3"
-                >
-                </Col>         
-                
-                    
-                    {/* <Button variant="outline-secondary" type="submit" onClick={this.processRecipe}>Calculer le menu</Button> */}
-                    <Button className="button" href="/menu">Calculer le menu</Button>
+             <div className="container-fluid text-white form-utilisateur">
+                <Container>
+                    <Row xs={1} md={2}>
+                        <Col>
+                                <Button className="button" href="/menu">Calculer le menu</Button>
 
-                    <hr /> 
-
-                    <p>Ajouter d'ingrédients :</p>
-                    <Button className="button" href="/add">Ma liste d'ingrédients</Button>
-                    
+                                <Button className="button" href="/add">Ma liste d'ingrédients</Button>
+                        </Col>                        
              
-            </Row> 
+                    </Row>
+                </Container>
+            </div> 
 
         );
     }
