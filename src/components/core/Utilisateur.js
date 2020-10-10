@@ -62,7 +62,7 @@ class Utilisateur extends Component {
                     <hr /> 
 
                     <p>Ajouter d'ingrédients :</p>
-                    <Button variant="secondary"><a href="/add">Ajouter des ingrédients</a></Button>
+                    <Button variant="secondary" href="/add">Ajouter des ingrédients</Button>
                     
                 </Col>
             </Row> 
