@@ -60,7 +60,7 @@ class Login extends React.Component {
             <Form.Control type="password" name='password' placeholder=" Enter Password"
               value={this.state.password} onChange={this.handleChange} required/>
           </Form.Group>
-          <Button variant="outline-primary" type="submit" onSubmit={this.handleSubmit}> Se connecter </Button>
+          <Button className="btn" type="submit" onSubmit={this.handleSubmit}> Se connecter </Button>
         </Form>
       </div>
     );

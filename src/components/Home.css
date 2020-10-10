@@ -54,6 +54,11 @@ body {
 
 
 }
+a:link
+ {
+    text-decoration: none;
+    color: none;
+}
 
 
 
