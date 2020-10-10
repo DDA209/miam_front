@@ -3,7 +3,8 @@ import Register from './Register';
 import Login from './Login';
 import UserInfo from '../components/core/UserInfo';
 import {Navbar,Nav, Form } from 'react-bootstrap';
-import '../index.css'; //css Emad 09/10
+// import '../index.css'; //css Emad 09/10
+import './Home.css'
 import {
   BrowserRouter as Router,
   Route,
@@ -18,9 +19,9 @@ class Navigation extends React.Component{
   render(){
     return(
       <Router>
-          <div>
+          <div className="navigation">
             <div> 
-                <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+                <Navbar collapseOnSelect expand="lg" >
                   <Navbar.Brand href="#home">Miam</Navbar.Brand>
                   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                   <Navbar.Collapse id="responsive-navbar-nav">

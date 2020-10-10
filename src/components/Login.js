@@ -4,7 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import {Link} from 'react-router-dom';
 // import Welcome from './Welcome';
 import {Form, Button} from 'react-bootstrap';
-import '../index.css';
+// import '../index.css';
+import './Login.css'
 class Login extends React.Component {
   constructor(props) {
     super(props);
