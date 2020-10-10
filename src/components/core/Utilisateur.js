@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import  {Button, Row, Col} from 'react-bootstrap';
 // import UserInfo from './UserInfo';
 // import Quantities from './Quantities';
-
+import './user.css';
 
 class Utilisateur extends Component {
     
@@ -54,17 +54,17 @@ class Utilisateur extends Component {
                     className="mb-3"
                 >
                 </Col>         
-                <Col>
+                
                     
                     {/* <Button variant="outline-secondary" type="submit" onClick={this.processRecipe}>Calculer le menu</Button> */}
-                    <Button variant="secondary" href="/menu">Calculer le menu</Button>
+                    <Button className="button" href="/menu">Calculer le menu</Button>
 
                     <hr /> 
 
                     <p>Ajouter d'ingrédients :</p>
-                    <Button variant="secondary" href="/add">Ajouter des ingrédients</Button>
+                    <Button className="button" href="/add">Ma liste d'ingrédients</Button>
                     
-                </Col>
+             
             </Row> 
 
         );

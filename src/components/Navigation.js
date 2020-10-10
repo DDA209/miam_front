@@ -4,7 +4,7 @@ import Login from './Login';
 import UserInfo from '../components/core/UserInfo';
 import {Navbar,Nav, Form } from 'react-bootstrap';
 // import '../index.css'; //css Emad 09/10
-import './Home.css'
+import './Nav.css'
 import {
   BrowserRouter as Router,
   Route,
