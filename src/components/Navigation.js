@@ -1,15 +1,10 @@
 import React from 'react';
-import Register from './Register';
-import Login from './Login';
-import UserInfo from '../components/core/UserInfo';
-import {Navbar,Nav, Form } from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 // import '../index.css'; //css Emad 09/10
 import './Nav.css'
 import {
   BrowserRouter as Router,
-  Route,
   Link,
-  Switch,
 } from 'react-router-dom'
 
 

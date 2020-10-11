@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import { Card, Button, Form, ListGroup, Modal } from 'react-bootstrap';
-import Ingredients from '../form/select/Ingredients';
+import { Card, ListGroup } from 'react-bootstrap';
+// import Ingredients from '../form/select/Ingredients';
 
 class UserList extends Component {
     constructor(props){

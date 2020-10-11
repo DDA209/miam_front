@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import './Add.css';
-import { Card, Button, Form, ListGroup, Modal,Container,Col,Row } from 'react-bootstrap';
+import { Button, Form, Container, Col, Row } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import IngredientsCount from '../core/IngredientsCount';
+// import IngredientsCount from '../core/IngredientsCount';
 import Ingredients from '../form/select/Ingredients'; 
-import Message from '../core/Message';
+// import Message from '../core/Message';
 import './Add.css'
 
 class Add extends Component {
@@ -20,7 +20,7 @@ class Add extends Component {
             list: [],  
         }
         this.handleChangeQuantity = this.handleChangeQuantity.bind(this);
-        this.handleChangeIngredient = this.handleChangeIngredient .bind(this);
+        this.handleChangeIngredient = this.handleChangeIngredient.bind(this);
         this.handleChangeUnity=this.handleChangeUnity.bind(this);
         // this.handleSubmit=this.handleSubmit.bind(this);
         this.addListIngredient=this.addListIngredient.bind(this);
@@ -64,7 +64,7 @@ class Add extends Component {
          })
      }
     addListIngredient(){
-            const { quantity, ingredient,unity, username,userId}=this.state;
+            const { quantity, ingredient, username}=this.state;
             const list = this.state.list;
             const ingredientFetch={
                 quantity,
@@ -179,6 +179,9 @@ class Add extends Component {
                             </ul>
                         </Col>
                     </Row>
+                    {/* <Card.Body className="text-center">   
+                        <Message />
+                    </Card.Body> */}
                 </Container>
             </div>
 

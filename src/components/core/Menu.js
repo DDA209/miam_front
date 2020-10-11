@@ -47,7 +47,7 @@ class Utilisateur extends Component {
     render (){
         return(
             <div className="justify-md-center form-menu">
-                <div>
+                <Row>
                     <Col 
                         xs={{ span: 4, offset: 4 }}
                     >
@@ -88,7 +88,7 @@ class Utilisateur extends Component {
                     {/* <div className="justify-md-center"> */}
                         
                     {/* </div> */}
-                </div>
+                </Row>
 
 
 

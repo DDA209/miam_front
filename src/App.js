@@ -27,11 +27,11 @@ import Menu from './components/core/Menu';
 
 class App extends Component {
 
-  constructor(props){
-    super(props); 
+  // constructor(props){
+  //   super(props); 
    
      
-  }
+  // }
 
   
 

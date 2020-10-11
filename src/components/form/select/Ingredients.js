@@ -1,6 +1,6 @@
 import React from 'react';
-import { Card, Button, Form, ListGroup, Modal } from 'react-bootstrap';
-import Quantities from '../../core/Quantities'; 
+import { Form } from 'react-bootstrap';
+// import Quantities from '../../core/Quantities'; 
 
 
 
