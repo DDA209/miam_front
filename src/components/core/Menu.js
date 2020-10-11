@@ -24,10 +24,8 @@ class Utilisateur extends Component {
             username: 'Batman',
             recipes: []
         };
-
     }
     
-
     componentDidMount (){
 
         console.log('components/core/Utilisateur #processRecipe');
