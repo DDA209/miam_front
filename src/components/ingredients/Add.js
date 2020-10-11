@@ -14,7 +14,7 @@ class Add extends Component {
         this.state = {
             ingredient:'',
             quantity:'',
-            userId: '5f81f42dfd88ec214ce90147',
+            userId: '5f8218ee9ad9824254e85e50',
             username:'Batman',
             unity:'',
             list: [],  

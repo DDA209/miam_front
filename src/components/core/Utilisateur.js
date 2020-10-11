@@ -46,19 +46,19 @@ class Utilisateur extends Component {
 
     render (){
         return(
-
-             <div className="container-fluid text-white form-utilisateur">
-                <Container>
-                    <Row xs={1} md={2}>
+            <div className="container-fluid  text-white  form-utilisateur">
+                <Container >
+                    <Row>
                         <Col>
-                                <Button className="button" href="/menu">Calculer le menu</Button>
+                                                <Button className="button mb-5" href="/menu" block>Calculer le menu</Button>
 
-                                <Button className="button b-3 m-5 ml-3" href="/add">Ma liste d'ingrédients</Button>
-                        </Col>                        
-             
+                                                <p className="font-weight-bolder text-dark label"> Ajouter ou retirer des ingrédients :</p>
+                                                <Button className="button" href="/add" block>Ma liste d'ingrédients</Button>
+                                       
+                        </Col>
                     </Row>
                 </Container>
-            </div> 
+            </div>
 
         );
     }

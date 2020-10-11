@@ -20,7 +20,7 @@ class Utilisateur extends Component {
         super(props);
         
         this.state = {
-            userId: '5f81f42dfd88ec214ce90147',
+            userId: '5f8218ee9ad9824254e85e50',
             username: 'Batman',
             recipes: []
         };
@@ -48,36 +48,46 @@ class Utilisateur extends Component {
         return(
             <div className="justify-md-center form-menu">
                 <div>
-                    <Col md={{ span: 4, offset: 4 }}>
-                    <Card className="text-center" style={{ width: '18rem' }}>
+                    <Col 
+                        xs={{ span: 4, offset: 4 }}
+                    >
+                    <Card className="text-center"> 
+                    {/* style={{ width: '18rem' }}> */}
                     <ListGroup className="list-group-flush">
-
+                    <Card.Body>
+                                    <Card.Title>Menu du jour</Card.Title>                        
+                                    {/* <ListGroupItem> */}
                         {this.state.recipes.map( (recipe) => {
                             return(
 
-                                <Card.Body>
-                                    <Card.Title>{recipe.title}</Card.Title>                        
-                                    <ListGroupItem>                        
+                                <Card.Body>                      
+                                    <ListGroupItem>
+                                    <Card.Title>{recipe.title}</Card.Title>       
                                         <Card.Img variant="top" img src={recipe.photos[0]} />
-                                        {/* <Card.Link href="/recette1">Recette</Card.Link> */}
                                         <Card.Text>
-                                        {`Temps de préparation : ${recipe.preparationTime} minutes`}
-                                        {`Difficulté :  ${recipe.difficultyLevel}/3`}
+                                            {`Temps de préparation : ${recipe.preparationTime}\u00A0minutes`}
+                                        </Card.Text>
+                                        <Card.Text>
+                                            {`Difficulté :  ${recipe.difficultyLevel}/3`}
                                         </Card.Text>                     
                                     </ListGroupItem>  
                                 </Card.Body>
                             )
                         })}
-                        
+                        {/* </ListGroupItem> */}
+                        </Card.Body>
+                        <Button className="buttontext bg-success text-dark font-weight-bolder b-3 m-5" href="/utilisateur">
+                            Retour à la page principale
+                        </Button>
                     </ListGroup>
                     </Card>
                     
-                    <div className="justify-md-center">
-                        <Button className="buttontext bg-success text-dark font-weight-bolder" href="/utilisateur">
-                            Retour à la page principale
-                        </Button>
-                    </div>
+                    
                     </Col>
+                    <Col xs={12}></Col>
+                    {/* <div className="justify-md-center"> */}
+                        
+                    {/* </div> */}
                 </div>
 
 
